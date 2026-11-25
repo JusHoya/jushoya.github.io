@@ -32,13 +32,38 @@ a.primary .sub{color:var(--sun)}
 .arrow{color:var(--gold);font-size:20px}
 h2{font-size:14px;letter-spacing:.2em;color:var(--gold);margin:30px 0 4px;text-transform:uppercase}
 footer{margin-top:34px;font-size:13px;color:var(--muted)}footer a{color:var(--muted)}
+.crew{position:relative;margin:0 0 22px;padding:14px 18px 12px;background:var(--panel);border:1px solid var(--line);
+backdrop-filter:blur(6px)}
+.crew::before,.crew::after{content:"";position:absolute;width:14px;height:14px;border:3px solid var(--gold)}
+.crew::before{left:-1px;top:-1px;border-right:0;border-bottom:0}.crew::after{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.crew p{margin:0}
+.crew-n{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.crew-n b{display:block;font-size:44px;line-height:1.05;letter-spacing:.02em;color:var(--gold);
+text-shadow:0 0 24px rgba(255,140,60,.45);font-variant-numeric:tabular-nums}
+.fuel{position:relative;height:16px;margin:12px 0 8px;background:rgba(11,10,36,.85);border:1px solid var(--line);overflow:hidden}
+.fuel span{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--ember),var(--gold) 85%,var(--sun));
+box-shadow:0 0 14px rgba(255,170,80,.7);animation:fuel 1.6s cubic-bezier(.2,.7,.2,1) both}
+.fuel span::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.18) 0 6px,
+transparent 6px 14px);animation:flow 1.2s linear infinite}
+.fuel i{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,248,236,.22)}
+.fuel i:nth-of-type(1){left:25%}.fuel i:nth-of-type(2){left:50%}.fuel i:nth-of-type(3){left:75%}
+@keyframes fuel{from{width:0}}@keyframes flow{to{background-position:28px 0}}
+.crew-next{font-size:17px;font-weight:600;color:var(--sun)}.crew-next b{color:var(--gold)}
+.crew-fine{margin-top:2px!important;font-size:12px;color:var(--muted);opacity:.8}
+@media (prefers-reduced-motion:reduce){.fuel span,.fuel span::after{animation:none}}
 </style></head>
 <body><main>
 <img class="av" src="avatar.jpg" alt="Hoya, the jusHOYA Gaming mascot" width="132" height="132">
 <h1>jusHOYA Gaming</h1>
 <p class="tag">Aerospace engineer plays GTA 6 and space games</p>
 <p class="pledge">🚀 Road to 100K: when the YouTube channel hits 100,000 subscribers, the whole AI video-editing kit goes free and open source.</p>
-<a class="btn primary" href="https://www.youtube.com/@jusHOYA_gaming" rel="me noopener"><span class="ic" style="background:#FF0000"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span><span class="txt"><span class="lab">Watch on YouTube</span><span class="sub">@jusHOYA_gaming · Full episodes + Shorts</span></span><span class="arrow" aria-hidden="true">›</span></a>
+<section class="crew" aria-label="Crew count">
+<p class="crew-n"><b>187</b> crew aboard</p>
+<div class="fuel" role="progressbar" aria-label="Fuel to the next launch" aria-valuemin="0" aria-valuemax="250" aria-valuenow="187"><span style="width:74.8%"></span><i></i><i></i><i></i></div>
+<p class="crew-next">Next launch at <b>250</b> crew · 75% fueled</p>
+<p class="crew-fine">Followers on every platform · updated 25 Nov</p>
+</section>
+<a class="btn primary" href="https://www.youtube.com/@jusHOYA_gaming" rel="me noopener"><span class="ic" style="background:#FF0000"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span><span class="txt"><span class="lab">Watch on YouTube</span><span class="sub">@jusHOYA_gaming · 105 subscribers · Full episodes + Shorts</span></span><span class="arrow" aria-hidden="true">›</span></a>
 <a class="btn" href="https://www.youtube.com/playlist?list=PLVtxhnRCtyTc" rel="me noopener"><span class="txt"><span class="lab">Start here</span><span class="sub">Channel trailer + the best first watch</span></span><span class="arrow" aria-hidden="true">›</span></a>
 <a class="btn" href="https://www.youtube.com/playlist?list=PLBUeeotoxnyM" rel="me noopener"><span class="txt"><span class="lab">GTA 6 Playthrough</span><span class="sub">Every episode in order</span></span><span class="arrow" aria-hidden="true">›</span></a>
 <a class="btn" href="gear.html" rel="me noopener"><span class="txt"><span class="lab">My setup</span><span class="sub">The cams, PC and printer behind the streams</span></span><span class="arrow" aria-hidden="true">›</span></a>
