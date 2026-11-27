@@ -24,6 +24,25 @@ a.primary .sub{color:var(--sun)}
 .arrow{color:var(--gold);font-size:20px}
 h2{font-size:14px;letter-spacing:.2em;color:var(--gold);margin:30px 0 4px;text-transform:uppercase}
 footer{margin-top:34px;font-size:13px;color:var(--muted)}footer a{color:var(--muted)}
+.crew{position:relative;margin:0 0 22px;padding:14px 18px 12px;background:var(--panel);border:1px solid var(--line);
+backdrop-filter:blur(6px)}
+.crew::before,.crew::after{content:"";position:absolute;width:14px;height:14px;border:3px solid var(--gold)}
+.crew::before{left:-1px;top:-1px;border-right:0;border-bottom:0}.crew::after{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.crew p{margin:0}
+.crew-n{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.crew-n b{display:block;font-size:44px;line-height:1.05;letter-spacing:.02em;color:var(--gold);
+text-shadow:0 0 24px rgba(255,140,60,.45);font-variant-numeric:tabular-nums}
+.fuel{position:relative;height:16px;margin:12px 0 8px;background:rgba(11,10,36,.85);border:1px solid var(--line);overflow:hidden}
+.fuel span{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--ember),var(--gold) 85%,var(--sun));
+box-shadow:0 0 14px rgba(255,170,80,.7);animation:fuel 1.6s cubic-bezier(.2,.7,.2,1) both}
+.fuel span::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.18) 0 6px,
+transparent 6px 14px);animation:flow 1.2s linear infinite}
+.fuel i{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,248,236,.22)}
+.fuel i:nth-of-type(1){left:25%}.fuel i:nth-of-type(2){left:50%}.fuel i:nth-of-type(3){left:75%}
+@keyframes fuel{from{width:0}}@keyframes flow{to{background-position:28px 0}}
+.crew-next{font-size:17px;font-weight:600;color:var(--sun)}.crew-next b{color:var(--gold)}
+.crew-fine{margin-top:2px!important;font-size:12px;color:var(--muted);opacity:.8}
+@media (prefers-reduced-motion:reduce){.fuel span,.fuel span::after{animation:none}}
  main{text-align:left} p{line-height:1.55} h2{margin-top:24px}</style></head>
 <body><main><h1>Privacy Policy</h1><p class="pledge">Last updated 2026-11-25</p><p>This site and the jusHOYA Gaming publishing tools are run by the creator of jusHOYA Gaming for their own channels.</p>
 <h2>This website</h2><p>The site has no accounts, forms, cookies, analytics or ads, and collects no personal data.
